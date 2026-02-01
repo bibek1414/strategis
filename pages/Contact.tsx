@@ -5,81 +5,81 @@ import { Reveal } from '../components/MotionWrapper';
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-white pt-40 pb-24">
-      <div className="max-w-5xl mx-auto px-6">
+    <div className="bg-white pt-32 pb-16">
+      <div className="max-w-7xl mx-auto px-6">
         <Reveal>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary mb-8 leading-tight">
-            Let's <span className="italic text-accent">Connect.</span>
+          <h1 className="text-5xl md:text-6xl font-serif font-medium text-primary mb-8 leading-tight">
+            Let's <span className="italic text-accent">connect.</span>
           </h1>
-          <p className="text-xl text-slate-500 max-w-2xl mb-16">
+          <p className="text-lg text-slate-500 max-w-2xl mb-12">
             Ready to take your business to the next stage of growth? Our team is standing by to help you solve your most complex problems.
           </p>
         </Reveal>
 
-        <div className="grid md:grid-cols-5 gap-16">
-          <div className="md:col-span-3">
-            <Reveal direction="right">
-              <form className="space-y-8 bg-slate-50 p-10 rounded-[40px]">
-                <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-7">
+            <Reveal direction="up">
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Full Name</label>
-                    <input type="text" className="w-full bg-white border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-accent/50" placeholder="John Doe" />
+                    <label className="text-xs font-medium text-slate-400 ml-1">Full name</label>
+                    <input type="text" className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent" placeholder="John Doe" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
-                    <input type="email" className="w-full bg-white border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-accent/50" placeholder="john@example.com" />
+                    <label className="text-xs font-medium text-slate-400 ml-1">Email address</label>
+                    <input type="email" className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent" placeholder="john@example.com" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Interested In</label>
-                  <select className="w-full bg-white border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-accent/50 appearance-none">
-                    <option>Growth Strategy</option>
-                    <option>Financial Modeling</option>
-                    <option>Systems & Ops Audit</option>
+                  <label className="text-xs font-medium text-slate-400 ml-1">Interested in</label>
+                  <select className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent appearance-none">
+                    <option>Growth strategy</option>
+                    <option>Financial modeling</option>
+                    <option>Systems & ops audit</option>
                     <option>Other</option>
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Your Message</label>
-                  <textarea className="w-full bg-white border border-slate-100 rounded-2xl px-6 py-4 focus:outline-none focus:ring-2 focus:ring-accent/50 h-32" placeholder="Tell us about your project..."></textarea>
+                  <label className="text-xs font-medium text-slate-400 ml-1">Your message</label>
+                  <textarea className="w-full bg-slate-50 border border-slate-100 rounded-lg px-4 py-3 focus:outline-none focus:ring-1 focus:ring-accent h-32" placeholder="Tell us about your project..."></textarea>
                 </div>
-                <button className="w-full bg-primary text-white font-bold py-5 rounded-2xl hover:bg-accent transition-all flex items-center justify-center gap-2">
-                  Send Inquiry <ArrowRight className="w-5 h-5" />
+                <button className="bg-primary text-white font-medium px-8 py-3 rounded-lg hover:bg-accent transition-all flex items-center justify-center gap-2">
+                  Send inquiry <ArrowRight className="w-4 h-4" />
                 </button>
               </form>
             </Reveal>
           </div>
 
-          <div className="md:col-span-2 space-y-12">
-            <Reveal direction="left" delay={0.2}>
+          <div className="md:col-span-5 space-y-10">
+            <Reveal direction="up" delay={0.2}>
               <div>
-                <h3 className="text-lg font-bold mb-6 flex items-center gap-3">
-                  <MessageSquare className="w-5 h-5 text-accent" /> Reach Out
+                <h3 className="text-lg font-medium mb-6 flex items-center gap-3">
+                  Reach out
                 </h3>
                 <div className="space-y-4 text-slate-600">
-                  <div className="flex items-center gap-4 p-4 border border-slate-100 rounded-2xl hover:border-accent transition-colors group">
-                    <Mail className="w-5 h-5 group-hover:text-accent" />
-                    <span className="font-medium">hello@strategis.co</span>
+                  <div className="flex items-center gap-4 text-sm font-medium">
+                    <Mail className="w-4 h-4 text-accent" />
+                    <span>hello@strategis.co</span>
                   </div>
-                  <div className="flex items-center gap-4 p-4 border border-slate-100 rounded-2xl hover:border-accent transition-colors group">
-                    <Phone className="w-5 h-5 group-hover:text-accent" />
-                    <span className="font-medium">+1 (555) 123-4567</span>
+                  <div className="flex items-center gap-4 text-sm font-medium">
+                    <Phone className="w-4 h-4 text-accent" />
+                    <span>+1 (555) 123-4567</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-8">
-                <h3 className="text-lg font-bold mb-6 flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-accent" /> Our Offices
+              <div className="pt-6">
+                <h3 className="text-lg font-medium mb-6 flex items-center gap-3">
+                  Our offices
                 </h3>
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <div>
-                    <h4 className="font-bold text-sm uppercase tracking-widest mb-2">New York</h4>
-                    <p className="text-slate-500 text-sm">250 Hudson Street, Suite 500<br />New York, NY 10013</p>
+                    <h4 className="font-medium text-sm mb-1">New York</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">250 Hudson Street, Suite 500<br />New York, NY 10013</p>
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm uppercase tracking-widest mb-2">London</h4>
-                    <p className="text-slate-500 text-sm">10 York Rd, South Bank<br />London SE1 7ND, UK</p>
+                    <h4 className="font-medium text-sm mb-1">London</h4>
+                    <p className="text-slate-500 text-sm leading-relaxed">10 York Rd, South Bank<br />London SE1 7ND, UK</p>
                   </div>
                 </div>
               </div>

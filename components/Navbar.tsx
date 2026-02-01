@@ -33,9 +33,9 @@ const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-9 h-9 bg-primary group-hover:bg-accent rounded-lg flex items-center justify-center transition-colors duration-300">
-              <span className="text-white font-bold text-lg">S</span>
+              <span className="text-white font-medium text-lg">S</span>
             </div>
-            <span className={`text-xl font-bold tracking-tight ${isScrolled || location.pathname !== '/' ? 'text-primary' : 'text-white'}`}>
+            <span className={`text-xl font-medium tracking-tight ${isScrolled || location.pathname !== '/' ? 'text-primary' : 'text-white'}`}>
               Strategis
             </span>
           </Link>
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-semibold transition-all hover:text-accent ${
+                className={`text-sm font-medium transition-all hover:text-accent ${
                   isActive(link.path) 
                     ? 'text-accent' 
                     : (isScrolled || location.pathname !== '/' ? 'text-slate-500' : 'text-white/80')
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             ))}
             <button
               onClick={() => setIsBookingOpen(true)}
-              className="flex items-center gap-1.5 bg-accent text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-teal-700 transition-all transform hover:-translate-y-0.5 shadow-lg shadow-accent/10"
+              className="flex items-center gap-1.5 bg-accent text-white px-5 py-2.5 rounded-full text-xs font-medium hover:bg-teal-700 transition-all shadow-lg shadow-accent/10"
             >
               Schedule a Call <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`text-lg font-bold ${isActive(link.path) ? 'text-accent' : 'text-slate-800'}`}
+                    className={`text-lg font-medium ${isActive(link.path) ? 'text-accent' : 'text-slate-800'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
                 ))}
                 <button
                   onClick={() => { setIsMobileMenuOpen(false); setIsBookingOpen(true); }}
-                  className="bg-accent text-white text-center py-4 rounded-2xl font-bold"
+                  className="bg-accent text-white py-4 rounded-2xl font-medium"
                 >
                   Schedule Now
                 </button>

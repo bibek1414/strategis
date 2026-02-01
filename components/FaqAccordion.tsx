@@ -22,7 +22,7 @@ export const FaqAccordion: React.FC<Props> = ({ items }) => {
             onClick={() => setActiveIndex(activeIndex === i ? null : i)}
             className="w-full flex items-center justify-between p-6 text-left"
           >
-            <span className="font-bold text-primary">{item.q}</span>
+            <span className="font-medium text-primary">{item.q}</span>
             <motion.div
               animate={{ rotate: activeIndex === i ? 180 : 0 }}
               transition={{ duration: 0.3 }}

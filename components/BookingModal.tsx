@@ -51,7 +51,7 @@ export const BookingModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6">
                     <Calendar className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-serif font-bold mb-2">Schedule a Discovery Call</h3>
+                  <h3 className="text-2xl font-serif font-medium mb-2">Schedule a discovery call</h3>
                   <p className="text-slate-500 text-sm mb-8">Select a time for a 15-minute strategic alignment session.</p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-8">
@@ -59,7 +59,7 @@ export const BookingModal: React.FC<Props> = ({ isOpen, onClose }) => {
                       <button
                         key={date}
                         onClick={() => setSelectedDate(date)}
-                        className={`p-4 rounded-2xl border text-sm font-bold transition-all ${selectedDate === date ? 'border-accent bg-accent text-white shadow-lg' : 'border-slate-100 bg-slate-50 text-slate-600 hover:border-accent/30'}`}
+                        className={`p-4 rounded-xl border text-sm font-medium transition-all ${selectedDate === date ? 'border-accent bg-accent text-white shadow-lg' : 'border-slate-100 bg-slate-50 text-slate-600 hover:border-accent/30'}`}
                       >
                         {date}
                       </button>
@@ -69,7 +69,7 @@ export const BookingModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   <button
                     disabled={!selectedDate}
                     onClick={() => setStep(2)}
-                    className="w-full bg-primary text-white font-bold py-4 rounded-2xl hover:bg-accent transition-all disabled:opacity-50"
+                    className="w-full bg-primary text-white font-medium py-3 rounded-lg hover:bg-accent transition-all disabled:opacity-50"
                   >
                     Continue
                   </button>
@@ -81,17 +81,17 @@ export const BookingModal: React.FC<Props> = ({ isOpen, onClose }) => {
                   <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6">
                     <Clock className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-serif font-bold mb-2">Almost there</h3>
+                  <h3 className="text-2xl font-serif font-medium mb-2">Almost there</h3>
                   <p className="text-slate-500 text-sm mb-8">Briefly, what is the main challenge you are facing?</p>
                   
                   <textarea 
-                    className="w-full bg-slate-50 border border-slate-100 rounded-2xl p-4 text-sm mb-8 h-32 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    className="w-full bg-slate-50 border border-slate-100 rounded-lg p-4 text-sm mb-8 h-32 focus:outline-none focus:ring-1 focus:ring-accent"
                     placeholder="e.g., We need to refine our unit economics for Series B..."
                   />
                   
                   <div className="flex gap-4">
-                    <button onClick={() => setStep(1)} className="flex-1 bg-slate-100 text-slate-600 font-bold py-4 rounded-2xl">Back</button>
-                    <button onClick={handleBook} className="flex-1 bg-accent text-white font-bold py-4 rounded-2xl shadow-lg">Confirm Booking</button>
+                    <button onClick={() => setStep(1)} className="flex-1 bg-slate-100 text-slate-600 font-medium py-3 rounded-lg">Back</button>
+                    <button onClick={handleBook} className="flex-1 bg-accent text-white font-medium py-3 rounded-lg shadow-lg">Confirm booking</button>
                   </div>
                 </div>
               )}
@@ -100,13 +100,13 @@ export const BookingModal: React.FC<Props> = ({ isOpen, onClose }) => {
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
+                  className="text-left py-12"
                 >
-                  <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center text-green-600 mx-auto mb-6">
-                    <CheckCircle2 className="w-10 h-10" />
+                  <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center text-green-600 mb-6">
+                    <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-serif font-bold mb-2">Call Scheduled!</h3>
-                  <p className="text-slate-500 text-sm">You will receive an invitation for <br/><span className="font-bold text-primary">{selectedDate}</span> shortly.</p>
+                  <h3 className="text-2xl font-serif font-medium mb-2 text-primary">Call scheduled!</h3>
+                  <p className="text-slate-500 text-sm">You will receive an invitation for <br/><span className="font-medium text-primary">{selectedDate}</span> shortly.</p>
                 </motion.div>
               )}
             </div>

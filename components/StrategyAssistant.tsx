@@ -68,10 +68,10 @@ const StrategyAssistant: React.FC = () => {
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-white text-sm font-bold">Strategy Assistant</h3>
+                  <h3 className="text-white text-sm font-medium">Strategy Assistant</h3>
                   <div className="flex items-center gap-1.5">
                     <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Active Partner</span>
+                    <span className="text-[10px] text-slate-400 font-medium">Active Partner</span>
                   </div>
                 </div>
               </div>
@@ -79,7 +79,7 @@ const StrategyAssistant: React.FC = () => {
 
             <div ref={scrollRef} className="flex-grow p-6 overflow-y-auto bg-slate-50 space-y-4">
               {messages.length === 0 && (
-                <div className="text-center py-12">
+                <div className="text-left py-12">
                   <p className="text-slate-400 text-xs font-medium leading-relaxed">Ask about growth strategy, market analysis, or how we help scale operations.</p>
                 </div>
               )}
